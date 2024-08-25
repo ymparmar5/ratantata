@@ -1,0 +1,1108 @@
+
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999999999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #fff url("../img/preloader.gif") no-repeat center center;
+}
+
+/* ==========================================================================
+	Global Styles
+========================================================================== */
+a {
+  color: #519DFA;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  border-bottom: 1px dashed;
+  outline: none !important;
+}
+a:hover,
+a:focus,
+a:active {
+  color: #0d0d0d;
+  text-decoration: none;
+  outline: none !important;
+}
+p {
+  color: #8c9398;
+  word-spacing: 1px;
+  line-height: 25px;
+  font-size: 14px;
+}
+h2 {
+  font-size: 15px;
+  color: #353535 !important;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+h2::after {
+  content: " ";
+  border: solid 1px #cccccc;
+  display: block;
+  width: 65px;
+  margin: 20px auto;
+}
+h6 {
+  font-size: 15px;
+  color: #8c8c8c;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+h6::after {
+  content: " ";
+  border: solid 1px #cccccc;
+  display: block;
+  width: 65px;
+  margin-top: 20px;
+}
+/* ==========================================================================HTML5 display definitions========================================================================== */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  display: inline;
+  zoom: 1;
+}
+
+/* ==========================================================================Base========================================================================== */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html,
+html a {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: "Varela Round", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  overflow-x: hidden;
+width: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+/* ==========================================================================Links========================================================================== */
+a:focus {
+  outline: thin dotted;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+/* ==========================================================================Typography========================================================================== */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+  color: #353535;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: 12px;
+  margin: 2.33em 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 0em 55px;
+  border-left: 4px solid #cccccc;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+p,
+pre {
+  margin: 1em 0;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: "courier new", monospace;
+  font-size: 1em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+small {
+  font-size: 75%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+p {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 28px !important;
+}
+/* ==========================================================================Lists=============================================================================================================================Embedded content========================================================================== */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+/* ==========================================================================Tables========================================================================== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* ==========================================================================Section Styles========================================================================== */
+.section-padding {
+  padding: 90px 0 100px;
+}
+.dark-bg {
+  background: #f3f5f8;
+}
+.light-bg {
+  background-color: #fff;
+}
+.dark-box {
+  background: #f3f5f8;
+  -webkit-box-shadow: 0px 3px 0px 0px #519DFA;
+  -moz-box-shadow: 0px 3px 0px 0px #519DFA;
+  box-shadow: 0px 3px 0px 0px #519DFA;
+  padding: 20px 0;
+}
+.dark-box:hover,
+.dark-box:focus {
+  -webkit-box-shadow: 0px 3px 0px 0px #519DFA;
+  -moz-box-shadow: 0px 3px 0px 0px #519DFA;
+  box-shadow: 0px 3px 0px 0px #519DFA;
+}
+.box-hover {
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+}
+.box-hover:hover,
+.box-hover:focus {
+  transform: translate(0, -15px);
+  -webkit-transform: translate(0, -15px);
+  -ms-transform: translate(0, -15px);
+}
+.wrapper {
+  height: 650px;
+}
+.nopadding {
+  padding: 0;
+}
+.inner {
+  padding-top: 0px;
+}
+/* ==========================================================================Navigation========================================================================== */
+
+
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+  
+  .logos-carousel {
+    display: flex;
+    width: 100%;
+    animation: slide 20s linear infinite;
+  }
+  
+  .logos-carousel img {
+    width: 15%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+
+
+/* Shown menu */
+.show-menu .content-wrap {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transform: translate3d(0, 125px, 0);
+  transform: translate3d(0, 125px, 0);
+}
+.show-menu .menu-wrap {
+  width: 100%;
+  height: 125px;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  border-bottom: 1px solid #519DFA;
+}
+.show-menu .icon-list a {
+  opacity: 1;
+  -webkit-transition: opacity 0.4s 0.4s;
+  transition: opacity 0.4s 0.4s;
+}
+.show-menu .icon-list a:nth-child(2) {
+  -webkit-transition-delay: 0.42s;
+  transition-delay: 0.42s;
+}
+.show-menu .icon-list a:nth-child(3) {
+  -webkit-transition-delay: 0.44s;
+  transition-delay: 0.44s;
+}
+.show-menu .icon-list a:nth-child(4) {
+  -webkit-transition-delay: 0.46s;
+  transition-delay: 0.46s;
+}
+.show-menu .icon-list a:nth-child(5) {
+  -webkit-transition-delay: 0.48s;
+  transition-delay: 0.48s;  
+}
+.show-menu .icon-list a:nth-child(6) {
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+/* ==========================================================================Hero========================================================================== */
+.hero {
+  background: url("../img/ratantata.jpg") center no-repeat;
+  background-size: cover;
+  width: 1650px;
+  height: 1000px;
+  background-color: #000000;
+
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+
+.hero h1 {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  color: white;
+  text-shadow: 1px 1px black;
+  font-weight: bolder;
+
+  font-size: 120px;
+  letter-spacing: 6px;
+	  font-weight: 600;
+  text-transform: uppercase;
+}
+.hero h1 span {
+  color: #a1a9b0;
+}
+.hero h3 {
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 1rem;
+  width: 50%;
+  opacity: 0.5;
+  color: #ffffff;
+  background-image: linear-gradient(to left, rgba(255,0,0,0), rgba(255,0,0,1));
+  letter-spacing: 15px;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+.hero p {
+  letter-spacing: 1px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.carousel_items {
+  display: flex;
+  wrap: nowrap;
+  overflow: hidden;
+}
+
+.carousel_item {
+  position: relative;
+  min-width: 100%;
+  height: 100vh;
+  transition: all 0.5s linear;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.carousel_text {
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  transform: translate(-50%);
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  color: white;
+  text-shadow: 1px 1px black;
+  font-size: 120px;
+  letter-spacing: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.item1 {
+  background-image: url("https://wallpaperaccess.com/full/6053379.jpg");
+}
+
+.item2 {
+  background-image: url("/img/ratantata.jpg");
+}
+
+.item3 {
+  background-image: url("https://humanityinfinite.in/wp-content/uploads/2023/01/PTI10_15_2019_000258B_1572337162296_1572337172374.webp");
+}
+
+.item4 {
+  background-image: url("https://www.tatatrusts.org/Upload/Images/masthead/ratan-tata-img.jpg");
+}
+
+.item5 {
+  background-image: url("https://www.stackumbrella.com/wp-content/uploads/2021/09/imgpsh_fullsize_anim-1.jpg");
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .carousel_text {
+    font-size: 80px;
+    letter-spacing: 4px;
+    top: 10%;
+    left: 25%;
+  }
+}
+
+@media (max-width: 900px) {
+  .carousel_text {
+    font-size: 60px;
+    letter-spacing: 3px;
+    top: 15%;
+    left: 30%;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel_text {
+    font-size: 40px;
+    letter-spacing: 2px;
+    top: 20%;
+    left: 35%;
+  }
+
+  .carousel_item {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 400px) {
+  .carousel_text {
+    font-size: 30px;
+    letter-spacing: 1px;
+    top: 25%;
+    left: 40%;
+  }
+
+  .carousel_item {
+    width: 450px;
+    height: 40vh;
+    object-fit: fill;
+  }
+}
+
+/* ==========================================================================Intro========================================================================== */
+.intro p {
+  margin: 50px 0 0;
+}
+h1.arrow {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #353535;
+  letter-spacing: 4px;
+  background: url("../img/h1-bg.png") no-repeat center bottom;
+  padding-bottom: 30px;
+  font-weight: bold;
+}
+h1.arrow span {
+  color: #519DFA;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.logos-carousel {
+  display: flex;
+  width: 100%;
+  animation: slide 20s linear infinite;
+}
+
+.logos-carousel img {
+  width: 15%;
+  margin: 0rem 2rem;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* ==========================================================================About========================================================================== */
+.about-image {
+  height: 400px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.color-bg {
+  background: #519DFA;
+}
+
+.color-bg a {
+  color: #519DFA;
+}
+.color-bg h6,
+.color-bg p {
+  color: white;
+}
+.color-bg h6::after {
+  border-color: #fff;
+}
+.color-bg .weight-outline-btn {
+  color: white;
+  border-color: white;
+}
+.color-bg .weight-outline-btn:hover {
+  background: #fff;
+  color: #519DFA;
+  border-color: rgba(0, 0, 0, 0);
+}
+.about-text {
+  padding: 20px 50px 25px 50px;
+}
+.about-text h1 {
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #8c8c8c;
+}
+.color-bg h1.arrow span {
+  color: #519DFA;
+}
+.color-bg h1.arrow {
+  color: #fff;
+}
+/* ==========================================================================Services========================================================================== */
+.services {
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+.services .icon {
+  position: relative;
+  width: 175px;
+  height: 175px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 180px;
+  font-size: 56px;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  margin-bottom: 40px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  border: 1px solid #519DFA;
+  color: #519DFA;
+}
+.services .item:hover .icon {
+  background: #519DFA;
+  border: 1px solid #519DFA;
+}
+.services .item [class*="fa"] {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.services .item:hover [class*="fa"] {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  color: #fff;
+}
+.features-wrapper {
+  margin: 70px 0 0;
+}
+i.respons {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  margin: 0 auto;
+  line-height: 35px;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  border: 1px solid #cccccc;
+  color: #cccccc;
+}
+/* ==========================================================================iPhone Section========================================================================== */
+.iphone {
+  width: 50%;
+  background: #f3f5f8;
+  float: left;
+  height: 100%;
+  box-shadow: inset -15px -11px 40px -6px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset -15px -11px 40px -6px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset -15px -11px 40px -6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.fluid-white {
+  width: 50%;
+  background: #fff;
+  float: right;
+  height: 100%;
+  z-index: 2;
+}
+.responsive-services {
+  position: relative;
+}
+/* ==========================================================================Portfolio========================================================================== */
+.swag {
+  padding: 75px 0;
+}
+.swag h1 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.swag h1 span {
+  display: block;
+  font-size: 25px;
+  margin-top: 20px;
+}
+.down-arrow-btn {
+  width: auto;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  margin: 15px 5px 15px 5px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 40px;
+  padding: 0px 10px;
+  text-align: center;
+}
+.down-arrow-btn:hover,
+.down-arrow-btn:focus {
+  color: #fff;
+  background: rgba(0, 0, 0, 1);
+}
+.portfolio img {
+  height: 300px;
+  width: 100%;
+}
+img.grayscale {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  /* Firefox 3.5+,IE10 */
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+  /* Chrome 19+& Safari 6+*/
+  -webkit-transition: all 0.6s ease;
+  /* Fade to color for Chrome and Safari */
+  -webkit-backface-visibility: hidden;
+  /* Fix for transition flickering */
+}
+img.grayscale:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
+.row-offset-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+.row-offset-0 > * {
+  padding-left: 0;
+  padding-right: 0;
+}
+.effects {
+  padding-left: 15px;
+}
+.effects .img {
+  position: relative;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.effects .img:nth-child(n) {
+  margin-right: 5px;
+}
+.effects .img:first-child {
+  margin-left: -15px;
+}
+.effects .img:last-child {
+  margin-right: 0;
+}
+.effects .img img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+.overlay {
+  display: block;
+  position: absolute;
+  z-index: 20;
+  filter: none !important;
+  -webkit-filter: grayscale(0%);
+  overflow: hidden;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.overlay-effect .img i {
+  font-size: 30px;
+
+}
+.overlay-effect .overlay {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.overlay-effect .overlay a.expand {
+  left: 0;
+  right: 0;
+  bottom: 47%;
+  margin: 0 auto -30px auto;
+}
+.overlay-effect .img.hover .overlay {
+  height: 100%;
+  opacity: 1;
+}
+.img img {
+  width: -webkit-calc(50%+40px) !important;
+  width: calc(10%+40px) !important;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -moz-transition: opacity 0.35s, -moz-transform 0.35s;
+  -o-transition: opacity 0.35s, -o-transform 0.35s;
+  -webkit-transform: translate3d(-40px, 0, 0);
+  transform: translate3d(-40px, 0, 0);
+  -ms-transform: translate3d(-40px, 0, 0);
+}
+.img:hover img {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(-40px, 0, 0);
+}
+.hype {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50px;
+}
+
+.portfolio-row {
+  margin-bottom: 9rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  background-image: linear-gradient(to top , #519DFA, rgb(255, 255, 255));
+  z-index: -1;
+
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+/*
+/* ==========================================================================CTA========================================================================== */
+.spacer-cta {
+  position: absolute;
+  top: 305rem;
+  margin: 11rem 0rem;
+  z-index: 2;
+  width: 100%;
+  padding: 80px 0;
+}
+.outline-btn {
+  font-size: 2rem;
+  display: inline-block;
+  padding: 25px 40px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.outline-btn:hover,
+.outline-btn:focus {
+  color: #519DFA;
+}
+/* ==========================================================================CTA========================================================================== */
+
+
+.blog{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ==========================================================================Footer========================================================================== */
+footer a {
+  color: #a1a9b0;
+}
+footer {
+  background-color: #f3f5f8;
+  padding: 40px 0 30px;
+}
+footer p {
+  color: #808080;
+}
+/* ==========================================================================FlexSlider Custom CSS========================================================================== */
+#servicesSlider {
+  margin-top: 70px;
+}
+ul.slides li {
+  margin-bottom: 10px;
+}
+.features-slider {
+  position: relative;
+  padding: 11% 100px 10% 100px;
+  height: 400px;
+  background-color: #3f6184;
+}
+.features-slider ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.features-slider ul li {
+  width: 100%;
+}
+.features-slider li h1 {
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 22px;
+}
+.features-slider li p {
+  color: #fff;
+  font-size: 14px;
+}
+#clientSlider .flex-control-nav {
+  text-align: left;
+}
+#clientSlider .flex-control-nav li:first-child {
+  margin: 0px 4px 0px 0px;
+}
+#clientSlider small {
+  font-size: 12px;
+  font-weight: bold;
+}
+.flex-control-paging li a.flex-active {
+  background: #519DFA;
+  border-color: #519DFA;
+}
+
+.color-bg .flex-control-paging li a {
+  background: white;
+  border-color: white;
+}
+
+.color-bg .flex-control-paging li a.flex-active {
+  background: #519DFA;
+  border-color: #519DFA;
+}
+/* ==========================================================================Waypoints========================================================================== */
+.wp1,
+.wp2,
+.wp3,
+.wp4,
+.wp5,
+.wp6 {
+  visibility: hidden;
+}
+.bounceInLeft,
+.bounceInRight,
+.fadeInUp,
+.fadeInUpDelay,
+.fadeInDown,
+.fadeInUpD,
+.fadeInLeft,
+.fadeInRight {
+  visibility: visible;
+}
+.delay-05s {
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+}
+.delay-1s {
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+}
+.wp3 {
+  background: url("../img/iphone-bg.png") no-repeat center center;
+  background-position: 200px 10px;
+  height: 100%;
+}
+/* ==========================================================================Responsive========================================================================== */
+/* 320px (iPhone) */
+@media screen and (max-width: 414px) {
+  .scrollto {
+    padding: 95px 0px 0px 0px;
+  }
+
+  .hero h1 {
+    font-size: 100px;
+    line-height: 80px;
+    margin-top: 65px;
+  }
+}
+/* 480px (WVGA - Low End Windows Phone) */
+@media screen and (max-width: 480px) {
+  .wrapper {
+    background: #f3f5f8;
+    height: 640px;
+  }
+  .iphone {
+    display: none;
+  }
+  .fluid-white {
+    display: none;
+  }
+  .wp2,
+  .wp4,
+  .wp5,
+  .light-box {
+    margin-bottom: 30px;
+  }
+}
+/* xGA iPad */
+@media screen and (max-width: 1024px) {
+  .wp3 {
+    background-position: 50px 0;
+  }
+  .swag {
+    background-attachment: scroll;
+  }
+  .subscribe {
+    background-attachment: scroll;
+  }
+}
+/* 1200px (Small Desktop,Netbook) */
+@media screen and (max-width: 1280px) {
+  .wp3 {
+    background-position: 50px 0;
+  }
+}
+/* Bootstrap 990px Breakpoint to 480px */
+@media screen and (min-width: 480px) and (max-width: 991px) {
+  .iphone {
+    display: none;
+  }
+  .fluid-white {
+    display: none;
+  }
+  .wrapper {
+    background: #f3f5f8;
+    height: 540px;
+  }
+  .wp2,
+  .wp4,
+  .wp5,
+  .light-box {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 50em) {
+  .icon-list a {
+    padding: 0.5em 0em;
+    margin: 0 5px;
+    font-size: 1em;
+  }
+}
+
+/** Responsive fixes **/
+@media screen and (max-width: 767px) {
+  .inner {
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  .hero h3 {
+    letter-spacing: 10px;
+  }
+
+  .hero {
+    padding-bottom: 0;
+  }
+
+  .subscribe input[type="text"] {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  .btn-send {
+    float: none;
+
+    margin-bottom: 80px;
+  }
+  .effects .img {
+    margin-bottom: 15px;
+  }
+  .show-menu .icon-list a {
+    display: block;
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+  }
+
+  .show-menu .menu-wrap {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .hero {
+    padding: 0px;
+  }
+
+  .subscribe {
+    padding-bottom: 40px;
+  }
+}
